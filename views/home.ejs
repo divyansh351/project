@@ -1,0 +1,33 @@
+<% layout('layouts/boilerplate')%>
+
+<div class="container home-container1 mb-5">
+    <h1 class="mb-3"><b>Startup Support</b></h1>
+    <% if(typeof(currentUser)=="undefined"){ %>
+    <form action="/login">
+        <button class="btn btn-success btn-lg mb-2" action="submit">
+            <b>Login </b>
+        </button>
+    </form>
+    <form action="/register">
+        <button class="btn btn-success btn-lg mb-4" action="submit">
+            <b> Register</b>
+        </button>
+    </form>
+    <% }else{ %>
+    <form action="/logout">
+        <button class="btn btn-danger btn-lg mb-4" action="submit">
+            <b>Logout</b>
+        </button>
+    </form>
+    <% } %>
+    <form action="/stocks">
+        <button class="btn btn-primary btn-lg mb-2" action="submit">
+            <b> View Stocks</b>
+        </button>
+    </form>
+</div>
+<div class="mt-auto footer home-container2">
+    <h4><b> Project made by:</b></h4>
+
+    <a href="https://github.com/divyansh351">Divyansh Gupta</a>
+</div>

@@ -1,0 +1,104 @@
+<% layout('layouts/boilerplate')%>
+<div class="row">
+    <h1 class="text-left"><b> New Stock Registration</b></h1>
+    <div class="col6">
+        <form action="/stocks" method="POST" class="validated-form" novalidate>
+            <div class="mb-2 col-md-4">
+                <label class="form-label" for="title"><b>Title</b></label>
+                <input
+                    class="form-control"
+                    type="text"
+                    id="title"
+                    name="stock[title]"
+                    required
+                />
+                <div class="valid-feedback">
+                    Looks Good!
+                </div>
+            </div>
+            <div class="mb-2 col-md-4">
+                <label class="form-label" for="valuation"><b>
+                    Valuation</b></label>
+                <div class="input-group">
+                    <span class="input-group-text" id="valuation-label"><b>&#8377</b></span>
+                    <input
+                        class="form-control"
+                        type="number"
+                        id="valuation"
+                        placeholder="0"
+                        aria-label="valuation"
+                        aria-describedby="valuation-label"
+                        name="stock[valuation]"
+                        required
+                    />
+                    <div class="valid-feedback">
+                        Looks Good!
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-2 col-md-4">
+                <label class="form-label" for="price"><b>Price</b></label>
+                <div class="input-group">
+                    <span class="input-group-text" id="price-label"><b>&#8377</b></span>
+                    <input
+                        class="form-control"
+                        type="number"
+                        id="price"
+                        placeholder="0"
+                        aria-label="price"
+                        aria-describedby="price-label"
+                        name="stock[price]"
+                        required
+                    />
+                    <div class="valid-feedback">
+                        Looks Good!
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-2 col-md-4">
+                <label class="form-label" for="totalStocks"><b>Total Stocks</b></label>
+                <input
+                    class="form-control"
+                    type="number"
+                    id="totalStocks"
+                    name="stock[totalStocks]"
+                    required
+                />
+                <div class="valid-feedback">
+                    Looks Good!
+                </div>
+            </div>
+            <div class="mb-2 col-md-4">
+                <label class="form-label" for="description"><b>Description</b></label>
+                <textarea
+                    class="form-control"
+                    type="text"
+                    id="description"
+                    name="stock[description]"
+                    required
+                ></textarea>
+                <div class="valid-feedback">
+                    Looks Good!
+                </div>
+            </div>
+            <div class="mb-2 col-md-4">
+                <label class="form-label" for="image"><b>Image URL</b> </label>
+                <input
+                    class="form-control"
+                    type="text"
+                    id="image"
+                    name="stock[image]"
+                    required
+                />
+                <div class="valid-feedback">
+                    Looks Good!
+                </div>
+            </div>
+            <div class="mb-2 col-md-4">
+                <button class="btn btn-success">Add Stock</button>
+            </div>
+        </form>
+    </div>
+</div>
